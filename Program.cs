@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using System.IO;
 
-namespace ConsoleApplication
+namespace AspNetCoreDocker
 {
     public class Program
     {

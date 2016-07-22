@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
 
-namespace ConsoleApplication
+namespace AspNetCoreDocker
 {
     public class Startup
     {        
