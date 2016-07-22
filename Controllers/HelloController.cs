@@ -11,7 +11,7 @@ namespace ConsoleApplication.Controllers
         {
             return new JsonResult(new 
             {
-                message = $"Hello {name}"    
+                message = $"Hello {name}!"    
             });
         }
     }
