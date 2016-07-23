@@ -1,7 +1,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace ConsoleApplication.Controllers
+namespace AspNetCoreDocker.Controllers
 {
     [Route("api/[controller]")]
     public class HelloController: ControllerBase
@@ -11,7 +11,7 @@ namespace ConsoleApplication.Controllers
         {
             return new JsonResult(new 
             {
-                message = $"Hello {name}"    
+                message = $"Hello {name}!"    
             });
         }
     }
