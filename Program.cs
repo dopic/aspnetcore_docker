@@ -8,7 +8,7 @@ namespace AspNetCoreDocker
     {
         public static void Main(string[] args)
         {
-            var rootPath = Directory.GetCurrentDirectory();
+           var rootPath = Directory.GetCurrentDirectory();
 
            var config = new ConfigurationBuilder()
                 .SetBasePath(rootPath)

@@ -19,13 +19,13 @@ namespace AspNetCoreDocker.Controllers
         }
         
         [HttpGet]
-        public List<Order> GetAll([FromQuery] int take = 10)
+        public List<Order> Get([FromQuery] int take = 10)
         {
             return this._context.Orders.Take(take).ToList();
         }
 
         [HttpGet("{id:Guid}")]
-        public Order Get(Guid id)
+        public Order GetById(Guid id)
         {
             return this._context.Orders.Include(o=> o.Items).FirstOrDefault(o => o.Id == id);
         }
