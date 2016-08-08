@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace AspNetCoreDocker.ViewModels
+namespace AspNetCoreDocker.InputModels
 {
     public class LoginInputModel
     {

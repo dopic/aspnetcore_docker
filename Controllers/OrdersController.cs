@@ -21,15 +21,15 @@ namespace AspNetCoreDocker.Controllers
         }
         
         [HttpGet]
-        public List<Order> Get([FromQuery] int take = 10)
+        public IActionResult Get([FromQuery] int take = 10)
         {
-            return this._context.Orders.Take(take).ToList();
+            return Json(this._context.Orders.Take(take).ToList());
         }
 
         [HttpGet("{id:Guid}")]
-        public Order GetById(Guid id)
+        public IActionResult GetById(Guid id)
         {
-            return this._context.Orders.Include(o=> o.Items).FirstOrDefault(o => o.Id == id);
+            return Json(this._context.Orders.Include(o=> o.Items).FirstOrDefault(o => o.Id == id));
         }
 
         [HttpPost]
