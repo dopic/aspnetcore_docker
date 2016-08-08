@@ -5,10 +5,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using AspNetCoreDocker.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AspNetCoreDocker.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     public class OrdersController: Controller
     {    
         private EFContext _context;
