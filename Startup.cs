@@ -30,8 +30,8 @@ namespace AspNetCoreDocker
             var connectionString = _configuration.GetConnectionString("Default");
             services.AddDbContext<EFContext>(options => options.UseSqlite(connectionString));
 
-            var key = Encoding.UTF8.GetBytes(_configuration.GetSection("Auth:SecurityKey").Value);
-            var expiration = Int32.Parse(_configuration.GetSection("Auth:Expiration").Value);       
+            var key = Encoding.UTF8.GetBytes(_configuration["Auth:SecurityKey"]);
+            var expiration = Int32.Parse(_configuration["Auth:Expiration"]);       
             services.AddSingleton<JwtSettings>(new JwtSettings(new SymmetricSecurityKey(key), expiration));
 
             services.AddSingleton<AuthenticationHandler>();
